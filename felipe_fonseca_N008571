@@ -1,0 +1,28 @@
+class Aluno {
+  constructor(nome, ra) {
+    this.nome = nome;
+    this.ra = ra;
+  }
+
+  informarRA() {
+    return `O RA do(a) aluno(a) ${this.nome} é ${this.ra}.`;
+  }
+}
+
+class AlunoGraduacao extends Aluno {
+  constructor(nome, ra, curso) {
+    super(nome, ra);
+    this.curso = curso;
+  }
+
+  informarCurso() {
+    return `${this.nome} está cursando ${this.curso}.`;
+  }
+}
+
+const aluno1 = new Aluno('Felipe', 'N008571');
+console.log(aluno1.informarRA()); //
+
+const aluno2 = new AlunoGraduacao('Felipe', 'N008571', 'Análise e Desenvolvimento de sistemas')
+console.log(aluno2.informarRA())
+console.log(aluno2.informarCurso())
